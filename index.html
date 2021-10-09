@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-       * {
-           background-color: rgb(100, 220, 185);
-           font-weight: normal;
-           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-           padding: 0.7rem;
-       }
-       li{
-            margin-left: 3rem;
-            font-size: larger;
-       }
-       a{
-           padding-left: 3rem;
-           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-           font-size: large;
-       }
+      .opc {
+        background-image: url("background_photo.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+      * {
+        color: white;
+        font-weight: bold;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 0.4rem 0.5rem;
+      }
+      li {
+        margin-left: 3rem;
+        font-size: larger;
+      }
+      li:hover {
+        color: red;
+      }
+      a {
+        padding-left: 3rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: large;
+        text-decoration: none;
+      }
+      a:hover {
+        color: red;
+        font-size: 110%;
+      }
+      th {
+        font-style: italic;
+      }
     </style>
     <title>DW2A4 Repositório</title>
-</head>
-<body>
-    <h1>Repositório da disciplina DW2A4</h1>
+  </head>
+  <body class="opc">
+    <h1>Repositório da disciplina Desenvolvimento Web II</h1>
     <h2>Informações</h2>
     <ul>
-        <li>Curso: Tecologia em Análise e Desenvolvimento de Sistemas</li>
-        <li>Disciplina: Desenvolvimento Web II</li>
-        <li>Docente: Johnata Souza Santicioli</li>
-        <li>Discente: Gabriel R. Trindade</li>
+      <li>Curso: Tecologia em Análise e Desenvolvimento de Sistemas</li>
+      <li>Disciplina: Desenvolvimento Web II</li>
+      <li>Docente: Johnata Souza Santicioli</li>
+      <li>Discente: Gabriel R. Trindade</li>
     </ul>
-    
+
     <h2>Atividades & Trabalhos</h2>
-    <a href="./Atividades/A1/index.html">Acessar a página Dev.Finance$</a>
-    <a href="./tecnologia-javascript/Tecnologias Javascript.pdf">Acessar Projeto React Native</a>
-</body>
+    <table>
+      <tr>
+        <th>Atividade</th>
+        <th>Link</th>
+      </tr>
+      <tr>
+        <td>Página Dev.Finance$</td>
+        <td><a href="./Atividades/A3/index.html" target="_new">Acessar</a></td>
+      </tr>
+      <tr>
+        <td>Projeto React Native</td>
+        <td>
+          <a
+            href="./tecnologia-javascript/Tecnologias Javascript.pdf"
+            target="_new"
+            >Acessar</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>Lâmpada</td>
+        <td>
+          <a href="./Atividades/lampada/index.html" target="_new">Acessar</a>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
