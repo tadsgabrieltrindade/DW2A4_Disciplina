@@ -1,4 +1,4 @@
-//validar CPF | retorna -1 caso o cpf seja inválido
+// As validações retornam -1 caso o valor seja inválido
 const validar = {
   cpf(value, controlador = 9) {
     let verificadorMomento = [];
@@ -77,26 +77,26 @@ const validar = {
     const today = new Date();
     date = date.split("/");
 
-    console.log(typeof(today.getFullYear()));
-    console.log(date[2] );
+    const day = Number(date[0]);
+    const month = Number(date[1]);
+    const year = Number(date[2]);
 
-    if (date[2] == today.getFullYear()) {
-      if ((date[1] - 1) <= 11 && (date[1] - 1) <= today.getMonth()) {
-        if (date[0] <= 31 && date[0] <= today.getDate()) {
+    if (year === today.getFullYear()) {
+      if (month <= (today.getMonth() + 1)) {
+        if (day <= today.getDate()) {
           return 0;
         }
       }
+    }
 
-      console.log(typeof(today.getFullYear()));
-      if (date[2] < today.getFullYear()) {
-        if ((date[1] - 1) <= 11 ) {
-          if (date[0] <= 31) {
+      if (year < today.getFullYear()) {
+        if ((month <= 12 )) {
+          if (day <= 31) {
             return 0;
           }
         }
       } 
       return -1;
-    }
   },
 
   email(value) {

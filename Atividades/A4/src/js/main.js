@@ -5,6 +5,7 @@ import Validar from "./modules/valid.js";
 
 const fields = document.querySelectorAll("input");
 const submitButton = document.querySelector("#button");
+let validated = false;
 
 class data {
   constructor(nome, cpf, dataNascimento, email, telefone, cep) {
@@ -18,7 +19,6 @@ class data {
 }
 
 //mascarar inputs
-
 fields.forEach((input) => {
   const field = input.dataset.js;
 
@@ -42,16 +42,16 @@ function validarCPF() {
     fields[1].classList = "errorInput";
   } else {
     fields[1].classList = "";
-    console.log('CPF é válido!');
+    console.log("CPF é válido!");
   }
 }
 
-function validarDataNascimento(){
-  if(validar.date(fields[2].value) === -1){
-    fields[2].classList = 'errorInput' 
-  }else{
-    fields[2].classList = ''
-    console.log('Data de nascimento válido!');
+function validarDataNascimento() {
+  if (validar.date(fields[2].value) === -1) {
+    fields[2].classList = "errorInput";
+  } else {
+    fields[2].classList = "";
+    console.log("Data de nascimento válido!");
   }
 }
 
@@ -64,14 +64,14 @@ function validarEmail() {
   }
 }
 
-function validarTelefone(){
+function validarTelefone() {
   const phoneValue = fields[4].value.replace(/[^0-9]/g, "");
-  
-  if(validar.telefone(phoneValue) === -1){
-    fields[4].classList = 'errorInput' 
-  }else{
-    fields[4].classList = ''
-    console.log('Telefone válido!');
+
+  if (validar.telefone(phoneValue) === -1) {
+    fields[4].classList = "errorInput";
+  } else {
+    fields[4].classList = "";
+    console.log("Telefone válido!");
   }
 }
 
@@ -81,6 +81,11 @@ submitButton.addEventListener("click", (e) => {
   validarDataNascimento();
   validarEmail();
   validarTelefone();
-  
 
+  validated = false;
+  fields.forEach((tag) => {
+    console.log(tag.classList.contains("errorInput"));
+    if (tag.classList.contains("errorInput")) validated = true;
+  });
+  if (!validated) alert("Campos validados com sucesso!");
 });
