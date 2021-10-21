@@ -1,6 +1,4 @@
-import type from "./modules/masks.js";
 import Mascara from "./modules/masks.js";
-import validar from "./modules/valid.js";
 import Validar from "./modules/valid.js";
 
 const fields = document.querySelectorAll("input");
@@ -47,7 +45,7 @@ function validarCPF() {
 }
 
 function validarDataNascimento() {
-  if (validar.date(fields[2].value) === -1) {
+  if (Validar.date(fields[2].value) === -1) {
     fields[2].classList = "errorInput";
   } else {
     fields[2].classList = "";
@@ -56,7 +54,7 @@ function validarDataNascimento() {
 }
 
 function validarEmail() {
-  if (validar.email(fields[3].value) == -1) {
+  if (Validar.email(fields[3].value) == -1) {
     fields[3].classList = "errorInput";
   } else {
     fields[3].classList = "";
@@ -67,7 +65,7 @@ function validarEmail() {
 function validarTelefone() {
   const phoneValue = fields[4].value.replace(/[^0-9]/g, "");
 
-  if (validar.telefone(phoneValue) === -1) {
+  if (Validar.telefone(phoneValue) === -1) {
     fields[4].classList = "errorInput";
   } else {
     fields[4].classList = "";
@@ -84,7 +82,6 @@ submitButton.addEventListener("click", (e) => {
 
   validated = false;
   fields.forEach((tag) => {
-    console.log(tag.classList.contains("errorInput"));
     if (tag.classList.contains("errorInput")) validated = true;
   });
   if (!validated) alert("Campos validados com sucesso!");
