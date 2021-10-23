@@ -1,0 +1,79 @@
+* {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.header {
+  text-align: center;
+  font-size: large;
+  padding: 2%;
+  margin-bottom: 3rem;
+  border-bottom: groove #000;
+  background-color: rgb(12, 165, 58);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.header .home {
+  margin-right: 10%;
+  color: rgb(48, 48, 48);
+}
+
+.header .home:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+body {
+  background-color: rgb(169, 236, 189);
+}
+
+.my-form {
+  margin: 0 2% 0;
+  padding: 2rem 5% 20rem 0;
+  border: solid;
+  border-radius: 1rem;
+  text-align: left;
+  font-size: large;
+  display: flex;
+}
+
+.my-form #label {
+  text-align: center;
+  font-size: 110%;
+  margin: 0 3% 0 1%;
+}
+
+.my-form #input-cpf {
+  padding-right: 1%;
+}
+
+.my-form #button {
+  margin-left: 10%;
+  padding: 0.5%;
+  border-radius: 0.4rem;
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+
+.my-form #button:hover {
+  background-color: rgb(35, 35, 35);
+}
+
+.output {
+  display: grid;
+}
+
+.footer {
+  margin-top: 5%;
+  margin-bottom: 2%;
+  text-align: center;
+  color: black;
+  border-top: groove rgb(169, 236, 189);
+  padding-top: 1rem;
+  font-size: large;
+}
