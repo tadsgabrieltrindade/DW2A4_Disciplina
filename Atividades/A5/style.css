@@ -32,9 +32,9 @@ body {
   background-color: rgb(169, 236, 189);
 }
 
-.my-form {
+.container form {
   margin: 0 2% 0;
-  padding: 2rem 5% 20rem 0;
+  padding: 2rem 5% 2rem 0;
   border: solid;
   border-radius: 1rem;
   text-align: left;
@@ -42,17 +42,17 @@ body {
   display: flex;
 }
 
-.my-form #label {
+.container form #label {
   text-align: center;
   font-size: 110%;
   margin: 0 3% 0 1%;
 }
 
-.my-form #input-cpf {
+.container form #input-cpf {
   padding-right: 1%;
 }
 
-.my-form #button {
+.container form #button {
   margin-left: 10%;
   padding: 0.5%;
   border-radius: 0.4rem;
@@ -60,12 +60,22 @@ body {
   color: white;
 }
 
-.my-form #button:hover {
+.container form #button:hover {
   background-color: rgb(35, 35, 35);
 }
 
-.output {
-  display: grid;
+.container .output {
+  margin: 0 4% 0;
+  padding: 2rem 5% 2rem 0;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.container .output #update {
+  padding-top: 5%;
+  text-align: right;
+  font-style: italic;
+  font-size: smaller;
 }
 
 .footer {
