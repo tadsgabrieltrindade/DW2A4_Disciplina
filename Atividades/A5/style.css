@@ -78,6 +78,10 @@ body {
   font-size: smaller;
 }
 
+span {
+  color: rgb(255, 0, 0);
+}
+
 .footer {
   margin-top: 5%;
   margin-bottom: 2%;
