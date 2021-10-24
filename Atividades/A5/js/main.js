@@ -15,9 +15,13 @@ button.addEventListener("click", (e) => {
   Promise.all([consultarCep(cpfInput.value)]).then((dataCep) => {
     dataCep = Object.values(dataCep[0]);
     let uf = dataCep[5];
-    Promise.all([covidBrasilApi(uf)]).then((dataCovid) => {
-      preencherResultados(dataCovid);
-    });
+    if(uf != undefined){
+        Promise.all([covidBrasilApi(uf)]).then((dataCovid) => {
+            preencherResultados(dataCovid);
+          });
+    }else{
+        alert('CEP incorreto!');
+    }
   });
 });
 
