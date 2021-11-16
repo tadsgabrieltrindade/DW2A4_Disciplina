@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <section className={styles.texto}>
-        <p>Desenvolvido por Gabriel Ramos Trindade </p>
+        <p>Desenvolvido por Gabriel Trindade </p>
         <p> DW2A4 - Prof. Johnata Santicioli</p>
         <p className={styles.logo}>Projeto SPA© 2021</p>
       </section>

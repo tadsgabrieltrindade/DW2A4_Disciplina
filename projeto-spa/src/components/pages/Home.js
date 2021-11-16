@@ -1,21 +1,17 @@
-import { Link} from "react-router-dom";
-import NewProject from "./NewProject";
+import styles from "./Home.module.css";
+import savings from "../../img/savings.svg";
+import LinkButton from "../layout/LinkButton";
 
 function Home() {
-
-
   return (
-    <div>
+    <section className={styles.home_container}>
       <h1>
         Bem vindo ao <span>Costs</span>
       </h1>
-      <h4>Começe a gerenciar seus projetos agora mesmo!</h4>
-
-
-      <Link to="/newproject"> Criar projeto</Link>
-
-      
-    </div>
+      <p>Começe a gerenciar seus projetos agora mesmo!</p>
+      <LinkButton to="/newproject" text="Criar Projeto"/>
+      <img src={savings} alt="Costs" />
+    </section>
   );
 }
 

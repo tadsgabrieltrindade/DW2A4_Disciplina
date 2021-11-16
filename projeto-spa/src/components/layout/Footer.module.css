@@ -23,6 +23,7 @@ section {
   margin-right: 1em;
   cursor: pointer;
   color: #fff;
+  transition: 0.5s;
 }
 
 .item:hover {
