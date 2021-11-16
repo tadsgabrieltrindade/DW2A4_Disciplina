@@ -1,0 +1,30 @@
+.footer {
+  background-color: #1a125c;
+  color: #fff;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+    margin-bottom: 1em;
+}
+
+.logo{
+    color: #f7aa12;
+}
+
+
+.item {
+  font-size: 2em;
+  margin-right: 1em;
+  cursor: pointer;
+  color: #fff;
+}
+
+.item:hover {
+  color: #f7aa12;
+}

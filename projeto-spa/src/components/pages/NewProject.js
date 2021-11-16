@@ -1,5 +1,12 @@
+import { Link} from "react-router-dom";
+
 function NewProject(){
-    return <h1>NEW PROJECT</h1>
+    return (
+        <div>
+            <h1>Novo Projeto</h1>
+            <Link to="/projects" > Projetos</Link>
+        </div>
+    )
 }
 
 export default NewProject;
