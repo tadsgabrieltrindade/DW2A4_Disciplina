@@ -12,50 +12,6 @@
       "id": 1
     },
     {
-      "name": "Software Jira Implantação",
-      "budget": "6300",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 2
-    },
-    {
-      "name": "Ds Vendas",
-      "budget": "2450",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 3
-    },
-    {
-      "name": "teste",
-      "budget": "5844",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 4
-    },
-    {
-      "name": "grrg",
-      "budget": "5844",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 5
-    },
-    {
       "name": "Projeto Backend",
       "budget": "8450",
       "category": {
