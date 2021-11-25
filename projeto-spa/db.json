@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "Projeto de Redes",
-      "budget": "30500",
+      "budget": "84501",
       "category": {
         "id": "1",
         "name": "Infra"
@@ -24,7 +24,7 @@
     },
     {
       "name": "DevOps",
-      "budget": "18500",
+      "budget": "20000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
