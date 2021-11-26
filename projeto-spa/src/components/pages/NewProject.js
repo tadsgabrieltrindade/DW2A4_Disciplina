@@ -14,7 +14,7 @@ function NewProject(){
         project.cost = 0;
         project.services = [];
 
-        fetch("http://localhost:5000/projects", {
+        fetch("https://projeto-dw2a4.herokuapp.com/projects", {
             method: "POST",
             headers:{
                 'Content-type' : 'application/json'

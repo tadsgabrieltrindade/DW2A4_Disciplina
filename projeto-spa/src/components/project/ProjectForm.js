@@ -11,7 +11,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
 
   useEffect(() => {
     fetch(
-      "http://localhost:5000/categories",
+      "https://projeto-dw2a4.herokuapp.com/categories",
       {
         method: "GET",
         headers: {
@@ -68,6 +68,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         value={project.budget ? project.budget : ""}
       />
 
+      
       <Select
         name="category_id"
         text="Selecione a categoria"
@@ -75,7 +76,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         handOnChange={handleCategory}
         value={project.category ? project.category.id : ""}
       />
-
+      
       <SubmitButton text={btnText} />
     </form>
   );

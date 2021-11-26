@@ -1,0 +1,29 @@
+.sobre_container{
+    width: 100%;
+    padding: 3em;
+}
+
+.sobre_container table tr td span {
+    font-weight: bold;
+}
+.sobre_container table tr td{
+   text-align: justify;
+   padding-top: 1em;
+   padding-right: 1em;
+   transition: 0.5s;
+}
+
+
+.sobre_container table tr:hover{
+    color: #f7aa12;
+ }
+
+ .sobre_container table tr td a{
+    text-decoration: none;
+    color: #1a125c;
+    font-weight: bold;
+ }
+
+ .sobre_container table tr td a:hover{
+    color: #865c08;
+ }
