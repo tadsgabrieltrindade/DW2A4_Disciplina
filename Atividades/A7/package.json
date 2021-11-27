@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=developlment webpack server",
+    "dev": "cross-env NODE_ENV=development webpack server",
     "build": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
@@ -21,8 +21,10 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.2",
     "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
+    "react-refresh": "^0.11.0",
     "webpack": "^5.64.2",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.5.0"

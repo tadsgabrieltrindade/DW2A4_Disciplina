@@ -5,6 +5,9 @@ const HtmlWebpPlugin = require('html-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+
+
 module.exports ={
 
     mode: isDevelopment ? 'development' : 'production',
@@ -28,13 +31,15 @@ module.exports ={
     },
 
     plugins: [
+        isDevelopment && new ReactRefreshWebpackPlugin(),
         new HtmlWebpPlugin({
             template: path.resolve(__dirname, 'public', 'index.html')
         })
-    ],
+    ].filter(Boolean),
 
     devServer: {
-        static: path.resolve(__dirname, 'public')
+        static: path.resolve(__dirname, 'public'),
+        hot: true
     },
 
     //com ela é possível fazer configurações para as regras de cada arquivo do projeto
@@ -42,7 +47,12 @@ module.exports ={
         rules: [{
             test: /\.jsx$/,
             exclude: /node_modules/,
-            use: 'babel-loader' //faz a intergração entre o babel e o webpack
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    plugins: [isDevelopment && require('react-refresh/babel')].filter(Boolean)
+                }
+            }
         },
         {
             test: /\.scss$/,
