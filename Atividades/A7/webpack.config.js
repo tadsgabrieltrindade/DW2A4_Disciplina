@@ -16,7 +16,7 @@ module.exports ={
 
     devtool: isDevelopment ? 'eval-source-map' : 'source-map', 
 
-    entry: path.resolve(__dirname, 'src', 'index.jsx'),
+    entry: path.resolve(__dirname, 'src', 'index.tsx'),
     
 
     //arquivo de saída do webpack
@@ -27,7 +27,7 @@ module.exports ={
 
     //indica quais arquivos que o webpack vai aceitar
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', ".tsx"],
     },
 
     plugins: [
@@ -45,10 +45,10 @@ module.exports ={
     //com ela é possível fazer configurações para as regras de cada arquivo do projeto
     module: {
         rules: [{
-            test: /\.jsx$/,
+            test: /\.(j|t)sx$/, // o | pipe é ou jsx OU tsx
             exclude: /node_modules/,
             use: {
-                loader: 'babel-loader',
+                loader: 'babel-loader',   //babel-loader só funciona em Js
                 options: {
                     plugins: [isDevelopment && require('react-refresh/babel')].filter(Boolean)
                 }
